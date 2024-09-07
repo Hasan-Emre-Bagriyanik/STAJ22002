@@ -1,0 +1,49 @@
+﻿@model List<ResultTeachersDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+    var count = 0;
+}
+
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Ders Programı Listesi</h6>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Adı</th>
+                                <th scope="col">Soyadı</th>
+                                <th scope="col">Branşı</th>
+                                <th scope="col">Görüntüleme İşlemi</th>
+                                <th scope="col">Oluşturma İşlemi</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                count++;
+                                <tr>
+                                    <th scope="row">@count</th>
+                                    <td>@item.FirstName</td>
+                                    <td>@item.LastName</td>
+                                    <td>@item.Branch</td>
+                                    <td><a href="/Schedule/ViewSchedule/@item.TeacherID" class="btn btn-outline-warning">Programı Görüntüle</a></td>
+                                    <td><a href="/Schedule/GenerateRandomSchedule/@item.TeacherID" class="btn btn-outline-success">Programı Rasgele Oluştur</a></td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

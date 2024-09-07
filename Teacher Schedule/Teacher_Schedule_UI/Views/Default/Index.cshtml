@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+@* BURASI ANA SAYFA
+ *@
+
+@await Component.InvokeAsync("_DefaultHomePageTeacherList")
+@await Component.InvokeAsync("_DefaultHomePageWhoWeAre")
+@await Component.InvokeAsync("_DefaultHomePagePopularLesson")
+@await Component.InvokeAsync("_DefaultHomePageStudentComment")
+

@@ -1,0 +1,31 @@
+﻿@model List<ResultWhoWeAreDto>
+
+<section class="w3l-index3" id="about">
+    <div class="midd-w3 pb-5">
+        <div class="container pb-lg-5 pb-md-4 pb-2">
+            <div class="row">
+                <div class="col-lg-5 pr-lg-0">
+                    <div class="w3l-left-img">
+                        <img src="https://www.nesliuner.com/dosyalar/images/site/nesli-uner.jpg" alt="Nesli Üner Resmi" width="490" height="475" />
+                    </div>
+                </div>
+                @foreach(var item in Model)
+                {
+                    <div class="col-lg-7 pl-lg-0">
+                        <div class="w3l-right-info">
+                            <h6 class="title-small">@item.Title</h6>
+                            <h3 class="title-big">@item.Subtitle</h3>
+                            <p class="mt-4">
+                               @item.Contents
+                            </p>
+
+
+                            <a href="#services" class="btn btn-style btn-primary mt-4">Hizmetlerimizi Keşfedin</a>
+                        </div>
+                    </div>
+                }
+                
+            </div>
+        </div>
+    </div>
+</section>

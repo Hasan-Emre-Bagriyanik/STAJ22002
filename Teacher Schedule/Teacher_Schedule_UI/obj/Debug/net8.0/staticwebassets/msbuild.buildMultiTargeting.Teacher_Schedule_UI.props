@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Teacher_Schedule_UI.props" />
+</Project>

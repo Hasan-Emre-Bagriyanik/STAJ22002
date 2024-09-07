@@ -1,0 +1,36 @@
+﻿@model UpdateTeachersDto
+@{
+    ViewData["Title"] = "UpdateTeacher";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Öğretmen Güncelleme Sayfası</h6>
+                <form method="post">
+                    <input type="hidden" asp-for="TeacherID" />
+                    <label>Öğretmen Adı</label>
+                    <input type="text" asp-for="FirstName" class="form-control" />
+                    <br />
+                    <label>Öğretmen Soyadı</label>
+                    <input type="text" asp-for="LastName" class="form-control" />
+                    <br />
+                    <label>Branş Adı</label>
+                    <input type="text" asp-for="Branch" class="form-control" />
+                    <br />
+                    <label>Haftalık Çalışma Saati</label>
+                    <input type="text" asp-for="WeeklyHours" class="form-control" />
+                    <br />
+                    <label>Öğretmen Resim URl</label>
+                    <input type="text" asp-for="Image" class="form-control" />
+                    <br />
+                    <button class="btn btn-primary">Öğretmeni Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

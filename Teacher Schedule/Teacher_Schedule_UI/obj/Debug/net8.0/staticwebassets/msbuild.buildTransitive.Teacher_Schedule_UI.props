@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Teacher_Schedule_UI.props" />
+</Project>
